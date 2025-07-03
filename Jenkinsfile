@@ -1,9 +1,12 @@
 pipeline{
     agent any
+    tools{
+        maven 'maven'
+    }
     stages{
-        stage("greeting"){
+        stage("pull from src"){
             steps{
-                echo "hi"
+                git branch:'main', url:'
             }
         }
     }
