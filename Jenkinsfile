@@ -9,10 +9,5 @@ pipeline {
                 git branch: 'main',url: 'https://github.com/Nk5302/tasktest.git'
             }
         }
-        stage("maven clean") {
-            steps{
-                sh 'mvn clean'
-            }
-        }
     }
 }
