@@ -4,17 +4,17 @@ pipeline {
         maven 'maven'
     }
     stages {
-        stage("pull the src"){
+        stage("pull the src") {
             steps {
-                git branch: 'main',url: 'https://github.com/VikasGowdaHR/canara.git'
+                git branch: 'main',url: 'https://github.com/Nk5302/tasktest.git'
             }
         }
-        stage("maven clean"){
+        stage("maven clean") {
             steps{
                 sh 'mvn clean'
             }
         }
-        stage("prepare the build"){
+        stage("prepare the build") {
             steps{
                 sh 'mvn package'
             }
